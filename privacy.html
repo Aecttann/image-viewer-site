@@ -3,77 +3,183 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Політика конфіденційності | ImageViewer</title>
+  <title>Privacy Policy | ImageViewer</title>
   <style>
-    :root { color-scheme: light; --text: #111318; --muted: #5f636d; --border: #dfe3ea; --bg: #f7f9fc; --card: #ffffff; }
+    :root { color-scheme: light; --text: #111318; --muted: #5f636d; --border: #dfe3ea; --bg: #f7f9fc; --card: #ffffff; --accent: #111318; }
     * { box-sizing: border-box; }
     body { margin: 0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.65; color: var(--text); background: radial-gradient(circle at top left, #ffffff, var(--bg)); }
-    main { max-width: 860px; margin: 0 auto; padding: 48px 20px 72px; }
+    main { max-width: 900px; margin: 0 auto; padding: 48px 20px 72px; }
     article { background: var(--card); border: 1px solid var(--border); border-radius: 18px; padding: 36px; box-shadow: 0 18px 45px rgba(20, 30, 50, 0.08); }
+    header { display: flex; gap: 20px; align-items: flex-start; justify-content: space-between; margin-bottom: 28px; }
     h1 { margin: 0 0 8px; font-size: clamp(2rem, 5vw, 3rem); line-height: 1.1; }
     h2 { margin-top: 32px; font-size: 1.35rem; }
     p, li { font-size: 1rem; }
     .muted { color: var(--muted); }
     a { color: #0b57d0; }
     ul { padding-left: 1.35rem; }
-    @media (max-width: 640px) { article { padding: 24px; border-radius: 14px; } main { padding-top: 24px; } }
+    .language-switch { display: inline-flex; flex-shrink: 0; padding: 4px; border: 1px solid var(--border); border-radius: 999px; background: #f2f5f9; }
+    .language-switch button { border: 0; border-radius: 999px; padding: 8px 14px; background: transparent; color: var(--muted); font: inherit; font-weight: 700; cursor: pointer; }
+    .language-switch button[aria-pressed="true"] { background: var(--accent); color: #fff; }
+    .policy[hidden] { display: none; }
+    @media (max-width: 700px) { article { padding: 24px; border-radius: 14px; } main { padding-top: 24px; } header { display: block; } .language-switch { margin-top: 18px; } }
   </style>
 </head>
 <body>
   <main>
     <article>
-      <h1>Політика конфіденційності ImageViewer</h1>
-      <p class="muted">Останнє оновлення: 27 квітня 2026 року</p>
+      <header>
+        <div>
+          <h1 id="page-title">Політика конфіденційності ImageViewer</h1>
+          <p class="muted" id="last-updated">Останнє оновлення: 28 квітня 2026 року</p>
+        </div>
+        <nav class="language-switch" aria-label="Language switcher">
+          <button type="button" id="lang-uk" aria-pressed="true">UK</button>
+          <button type="button" id="lang-en" aria-pressed="false">EN</button>
+        </nav>
+      </header>
 
-      <p>ImageViewer — це застосунок для перегляду, пошуку та збереження зображень із сервісу Unsplash. Ця політика пояснює, які дані може обробляти застосунок, для чого вони використовуються та як користувач може керувати ними.</p>
+      <section id="policy-uk" class="policy" lang="uk">
+        <p>ImageViewer — це застосунок для перегляду, пошуку та збереження зображень із сервісу Unsplash. Ця політика пояснює, які дані може обробляти застосунок, для чого вони використовуються та як користувач може керувати ними.</p>
 
-      <h2>1. Які дані обробляє застосунок</h2>
-      <p>ImageViewer не вимагає створення облікового запису та не просить користувача вводити ім'я, електронну пошту, номер телефону чи інші прямі ідентифікатори.</p>
-      <p>Залежно від використання функцій застосунку можуть оброблятися такі дані:</p>
-      <ul>
-        <li><strong>Пошукові запити.</strong> Коли користувач шукає фото або колекції, текст запиту надсилається до Unsplash API для отримання результатів.</li>
-        <li><strong>Дані про фото з Unsplash.</strong> Застосунок отримує від Unsplash URL-адреси зображень, назви, ідентифікатори, інформацію про автора, посилання на сторінку фото та посилання для реєстрації завантаження.</li>
-        <li><strong>Збережені зображення на пристрої.</strong> Коли користувач зберігає фото, застосунок записує файл у галерею або папку зображень пристрою.</li>
-        <li><strong>Доступ до локальних зображень.</strong> Застосунок може запитувати дозвіл на читання зображень, щоб показувати фото, які були збережені через ImageViewer.</li>
-        <li><strong>Технічні дані мережевого запиту.</strong> Під час звернення до Unsplash або завантаження зображення сторонні сервери можуть отримувати стандартні технічні дані, наприклад IP-адресу, тип пристрою, системні заголовки запиту та час звернення.</li>
-      </ul>
+        <h2>1. Які дані обробляє застосунок</h2>
+        <p>ImageViewer не вимагає створення облікового запису та не просить користувача вводити ім'я, електронну пошту, номер телефону чи інші прямі ідентифікатори.</p>
+        <p>Залежно від використання функцій застосунку можуть оброблятися такі дані:</p>
+        <ul>
+          <li><strong>Пошукові запити.</strong> Коли користувач шукає фото або колекції, текст запиту надсилається до Unsplash API для отримання результатів.</li>
+          <li><strong>Дані про фото з Unsplash.</strong> Застосунок отримує від Unsplash URL-адреси зображень, назви, ідентифікатори, інформацію про автора, посилання на сторінку фото та посилання для реєстрації завантаження.</li>
+          <li><strong>Збережені зображення на пристрої.</strong> Коли користувач зберігає фото, застосунок записує файл у галерею або папку зображень пристрою.</li>
+          <li><strong>Доступ до локальних зображень.</strong> Застосунок може запитувати дозвіл на читання зображень, щоб показувати фото, які були збережені через ImageViewer.</li>
+          <li><strong>Технічні дані мережевого запиту.</strong> Під час звернення до Unsplash або завантаження зображення сторонні сервери можуть отримувати стандартні технічні дані, наприклад IP-адресу, тип пристрою, системні заголовки запиту та час звернення.</li>
+        </ul>
 
-      <h2>2. Для чого використовуються дані</h2>
-      <ul>
-        <li>щоб показувати добірки, результати пошуку та колекції зображень;</li>
-        <li>щоб відкривати детальний перегляд фото;</li>
-        <li>щоб зберігати вибрані зображення на пристрої користувача;</li>
-        <li>щоб показувати список зображень, збережених через застосунок;</li>
-        <li>щоб виконувати вимоги Unsplash щодо реєстрації події завантаження фото.</li>
-      </ul>
+        <h2>2. Для чого використовуються дані</h2>
+        <ul>
+          <li>щоб показувати добірки, результати пошуку та колекції зображень;</li>
+          <li>щоб відкривати детальний перегляд фото;</li>
+          <li>щоб зберігати вибрані зображення на пристрої користувача;</li>
+          <li>щоб показувати список зображень, збережених через застосунок;</li>
+          <li>щоб виконувати вимоги Unsplash щодо реєстрації події завантаження фото.</li>
+        </ul>
 
-      <h2>3. Передача даних третім сторонам</h2>
-      <p>ImageViewer використовує сервіс Unsplash для пошуку, перегляду та завантаження зображень. Коли користувач переглядає, шукає або завантажує фото, відповідні запити надсилаються до Unsplash. Обробка даних Unsplash регулюється політикою конфіденційності Unsplash: <a href="https://unsplash.com/privacy" rel="noopener noreferrer">https://unsplash.com/privacy</a>.</p>
-      <p>Застосунок не містить рекламних SDK, не використовує Firebase Analytics, Crashlytics або інші вбудовані аналітичні сервіси, і не продає персональні дані користувачів.</p>
+        <h2>3. Передача даних третім сторонам</h2>
+        <p>ImageViewer використовує сервіс Unsplash для пошуку, перегляду та завантаження зображень. Коли користувач переглядає, шукає або завантажує фото, відповідні запити надсилаються до Unsplash. Обробка даних Unsplash регулюється політикою конфіденційності Unsplash: <a href="https://unsplash.com/privacy" rel="noopener noreferrer">https://unsplash.com/privacy</a>.</p>
+        <p>Застосунок не містить рекламних SDK, не використовує Firebase Analytics, Crashlytics або інші вбудовані аналітичні сервіси, і не продає персональні дані користувачів.</p>
 
-      <h2>4. Дозволи пристрою</h2>
-      <ul>
-        <li><strong>Інтернет і стан мережі.</strong> Потрібні для отримання фото, колекцій і результатів пошуку з Unsplash.</li>
-        <li><strong>Читання зображень.</strong> Потрібне, щоб показувати збережені через застосунок зображення у розділі завантажень.</li>
-        <li><strong>Запис у сховище на старих версіях Android.</strong> На Android 9 і нижче може використовуватися дозвіл запису, щоб зберігати фото в галерею.</li>
-      </ul>
+        <h2>4. Дозволи пристрою</h2>
+        <ul>
+          <li><strong>Інтернет і стан мережі.</strong> Потрібні для отримання фото, колекцій і результатів пошуку з Unsplash.</li>
+          <li><strong>Читання зображень.</strong> Потрібне, щоб показувати збережені через застосунок зображення у розділі завантажень.</li>
+          <li><strong>Запис у сховище на старих версіях Android.</strong> На Android 9 і нижче може використовуватися дозвіл запису, щоб зберігати фото в галерею.</li>
+        </ul>
 
-      <h2>5. Зберігання та видалення даних</h2>
-      <p>ImageViewer не має власного серверного сховища користувацьких даних. Пошукові запити та дані фото не зберігаються на серверах розробника.</p>
-      <p>Збережені зображення залишаються на пристрої користувача, доки користувач самостійно не видалить їх через галерею, файловий менеджер або інший системний інструмент Android. Користувач також може відкликати дозволи застосунку в налаштуваннях Android.</p>
+        <h2>5. Зберігання та видалення даних</h2>
+        <p>ImageViewer не має власного серверного сховища користувацьких даних. Пошукові запити та дані фото не зберігаються на серверах розробника.</p>
+        <p>Збережені зображення залишаються на пристрої користувача, доки користувач самостійно не видалить їх через галерею, файловий менеджер або інший системний інструмент Android. Користувач також може відкликати дозволи застосунку в налаштуваннях Android.</p>
 
-      <h2>6. Безпека</h2>
-      <p>Застосунок використовує HTTPS-з'єднання для мережевої взаємодії з Unsplash та для завантаження зображень. Водночас жоден спосіб передавання або зберігання даних не може бути гарантовано абсолютно безпечним.</p>
+        <h2>6. Безпека</h2>
+        <p>Застосунок використовує HTTPS-з'єднання для мережевої взаємодії з Unsplash та для завантаження зображень. Водночас жоден спосіб передавання або зберігання даних не може бути гарантовано абсолютно безпечним.</p>
 
-      <h2>7. Діти</h2>
-      <p>ImageViewer не призначений спеціально для дітей віком до 13 років і не збирає свідомо персональні дані дітей. Якщо ви вважаєте, що дитина надала персональні дані через застосунок, зв'яжіться з розробником за контактами нижче.</p>
+        <h2>7. Діти</h2>
+        <p>ImageViewer не призначений спеціально для дітей віком до 13 років і не збирає свідомо персональні дані дітей. Якщо ви вважаєте, що дитина надала персональні дані через застосунок, зв'яжіться з розробником за контактами нижче.</p>
 
-      <h2>8. Зміни до політики</h2>
-      <p>Ця політика може оновлюватися, якщо змінюються функції застосунку, дозволи, сторонні сервіси або вимоги законодавства чи платформ. Актуальна версія завжди доступна на цій сторінці.</p>
+        <h2>8. Зміни до політики</h2>
+        <p>Ця політика може оновлюватися, якщо змінюються функції застосунку, дозволи, сторонні сервіси або вимоги законодавства чи платформ. Актуальна версія завжди доступна на цій сторінці.</p>
 
-      <h2>9. Контакти</h2>
-      <p>З питань конфіденційності, доступу до даних або видалення даних можна звернутися через GitHub Issues цього сайту: <a href="https://github.com/Aecttann/image-viewer-site/issues" rel="noopener noreferrer">https://github.com/Aecttann/image-viewer-site/issues</a>.</p>
+        <h2>9. Контакти</h2>
+        <p>З питань конфіденційності, доступу до даних або видалення даних можна звернутися через GitHub Issues цього сайту: <a href="https://github.com/Aecttann/image-viewer-site/issues" rel="noopener noreferrer">https://github.com/Aecttann/image-viewer-site/issues</a>.</p>
+      </section>
+
+      <section id="policy-en" class="policy" lang="en" hidden>
+        <p>ImageViewer is an app for browsing, searching, and saving images from Unsplash. This policy explains what data the app may process, why it is used, and how users can manage it.</p>
+
+        <h2>1. Data the app processes</h2>
+        <p>ImageViewer does not require an account and does not ask users to enter their name, email address, phone number, or other direct identifiers.</p>
+        <p>Depending on how the app is used, the following data may be processed:</p>
+        <ul>
+          <li><strong>Search queries.</strong> When a user searches for photos or collections, the query text is sent to the Unsplash API to retrieve results.</li>
+          <li><strong>Photo data from Unsplash.</strong> The app receives image URLs, titles, identifiers, author information, photo page links, and download tracking links from Unsplash.</li>
+          <li><strong>Images saved on the device.</strong> When a user saves a photo, the app writes the file to the device gallery or pictures folder.</li>
+          <li><strong>Access to local images.</strong> The app may request permission to read images so it can display photos saved through ImageViewer.</li>
+          <li><strong>Technical network request data.</strong> When the app contacts Unsplash or downloads an image, third-party servers may receive standard technical data such as IP address, device type, request headers, and request time.</li>
+        </ul>
+
+        <h2>2. How the data is used</h2>
+        <ul>
+          <li>to show image feeds, search results, and collections;</li>
+          <li>to open full photo previews;</li>
+          <li>to save selected images on the user's device;</li>
+          <li>to show the list of images saved through the app;</li>
+          <li>to comply with Unsplash requirements for registering photo download events.</li>
+        </ul>
+
+        <h2>3. Sharing data with third parties</h2>
+        <p>ImageViewer uses Unsplash to search, browse, and download images. When a user browses, searches, or downloads photos, the related requests are sent to Unsplash. Unsplash data processing is governed by the Unsplash Privacy Policy: <a href="https://unsplash.com/privacy" rel="noopener noreferrer">https://unsplash.com/privacy</a>.</p>
+        <p>The app does not include advertising SDKs, does not use Firebase Analytics, Crashlytics, or other embedded analytics services, and does not sell users' personal data.</p>
+
+        <h2>4. Device permissions</h2>
+        <ul>
+          <li><strong>Internet and network state.</strong> Required to retrieve photos, collections, and search results from Unsplash.</li>
+          <li><strong>Read images.</strong> Required to display images saved through the app in the downloads section.</li>
+          <li><strong>Write storage on older Android versions.</strong> On Android 9 and below, write permission may be used to save photos to the gallery.</li>
+        </ul>
+
+        <h2>5. Data retention and deletion</h2>
+        <p>ImageViewer does not operate its own server-side storage for user data. Search queries and photo data are not stored on developer-controlled servers.</p>
+        <p>Saved images remain on the user's device until the user deletes them through the gallery, file manager, or another Android system tool. Users can also revoke app permissions in Android settings.</p>
+
+        <h2>6. Security</h2>
+        <p>The app uses HTTPS connections for network communication with Unsplash and for image downloads. However, no method of transmission or storage can be guaranteed to be completely secure.</p>
+
+        <h2>7. Children</h2>
+        <p>ImageViewer is not specifically directed to children under 13 and does not knowingly collect children's personal data. If you believe that a child has provided personal data through the app, please contact the developer using the contact option below.</p>
+
+        <h2>8. Changes to this policy</h2>
+        <p>This policy may be updated if app features, permissions, third-party services, legal requirements, or platform requirements change. The current version is always available on this page.</p>
+
+        <h2>9. Contact</h2>
+        <p>For privacy questions, data access, or deletion requests, contact the developer through this site's GitHub Issues page: <a href="https://github.com/Aecttann/image-viewer-site/issues" rel="noopener noreferrer">https://github.com/Aecttann/image-viewer-site/issues</a>.</p>
+      </section>
     </article>
   </main>
+
+  <script>
+    const content = {
+      uk: {
+        title: 'Політика конфіденційності ImageViewer',
+        updated: 'Останнє оновлення: 28 квітня 2026 року',
+        lang: 'uk'
+      },
+      en: {
+        title: 'ImageViewer Privacy Policy',
+        updated: 'Last updated: April 28, 2026',
+        lang: 'en'
+      }
+    };
+
+    const title = document.getElementById('page-title');
+    const updated = document.getElementById('last-updated');
+    const ukButton = document.getElementById('lang-uk');
+    const enButton = document.getElementById('lang-en');
+    const ukPolicy = document.getElementById('policy-uk');
+    const enPolicy = document.getElementById('policy-en');
+
+    function setLanguage(language, updateHash = true) {
+      const isEnglish = language === 'en';
+      document.documentElement.lang = content[language].lang;
+      title.textContent = content[language].title;
+      updated.textContent = content[language].updated;
+      ukPolicy.hidden = isEnglish;
+      enPolicy.hidden = !isEnglish;
+      ukButton.setAttribute('aria-pressed', String(!isEnglish));
+      enButton.setAttribute('aria-pressed', String(isEnglish));
+      if (updateHash) {
+        history.replaceState(null, '', isEnglish ? '#en' : '#uk');
+      }
+    }
+
+    ukButton.addEventListener('click', () => setLanguage('uk'));
+    enButton.addEventListener('click', () => setLanguage('en'));
+    setLanguage(location.hash === '#en' ? 'en' : 'uk', false);
+  </script>
 </body>
 </html>
