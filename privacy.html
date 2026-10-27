@@ -30,7 +30,7 @@
       <header>
         <div>
           <h1 id="page-title">Політика конфіденційності ImageViewer</h1>
-          <p class="muted" id="last-updated">Останнє оновлення: 28 квітня 2026 року</p>
+          <p class="muted" id="last-updated">Останнє оновлення: 27 жовтня 2026 року</p>
         </div>
         <nav class="language-switch" aria-label="Language switcher">
           <button type="button" id="lang-uk" aria-pressed="true">UK</button>
@@ -39,105 +39,131 @@
       </header>
 
       <section id="policy-uk" class="policy" lang="uk">
-        <p>ImageViewer — це застосунок для перегляду, пошуку та збереження зображень із сервісу Unsplash. Ця політика пояснює, які дані може обробляти застосунок, для чого вони використовуються та як користувач може керувати ними.</p>
+        <p>ImageViewer — це застосунок для перегляду, пошуку та збереження зображень із сервісу Unsplash. Ця політика пояснює, які дані обробляються під час роботи застосунку, показу реклами та покупок, для чого вони використовуються та як користувач може керувати ними.</p>
 
         <h2>1. Які дані обробляє застосунок</h2>
-        <p>ImageViewer не вимагає створення облікового запису та не просить користувача вводити ім'я, електронну пошту, номер телефону чи інші прямі ідентифікатори.</p>
+        <p>ImageViewer не вимагає створення власного облікового запису та не просить вводити ім'я, електронну пошту чи номер телефону. Це не виключає обробку технічних і рекламних ідентифікаторів сторонніми сервісами.</p>
         <p>Залежно від використання функцій застосунку можуть оброблятися такі дані:</p>
         <ul>
-          <li><strong>Пошукові запити.</strong> Коли користувач шукає фото або колекції, текст запиту надсилається до Unsplash API для отримання результатів.</li>
-          <li><strong>Дані про фото з Unsplash.</strong> Застосунок отримує від Unsplash URL-адреси зображень, назви, ідентифікатори, інформацію про автора, посилання на сторінку фото та посилання для реєстрації завантаження.</li>
-          <li><strong>Збережені зображення на пристрої.</strong> Коли користувач зберігає фото, застосунок записує файл у галерею або папку зображень пристрою.</li>
-          <li><strong>Доступ до локальних зображень.</strong> Застосунок може запитувати дозвіл на читання зображень, щоб показувати фото, які були збережені через ImageViewer.</li>
-          <li><strong>Технічні дані мережевого запиту.</strong> Під час звернення до Unsplash або завантаження зображення сторонні сервери можуть отримувати стандартні технічні дані, наприклад IP-адресу, тип пристрою, системні заголовки запиту та час звернення.</li>
+          <li><strong>Пошукові запити та дані фото.</strong> Текст пошуку надсилається до Unsplash API. У відповідь застосунок отримує URL-адреси, назви та ідентифікатори зображень, інформацію про авторів, посилання на фото й адреси для реєстрації завантаження.</li>
+          <li><strong>Зображення й локальні дані.</strong> Збережені фото записуються в галерею або папку зображень. На пристрої зберігаються список завантажень із посиланнями на файли, кеш зображень, стан вимкнення реклами та лічильники її частоти. Застосунок не завантажує фото з галереї на сервер розробника або рекламні сервери.</li>
+          <li><strong>Технічні дані мережевих запитів.</strong> Unsplash, сервери зображень і сервіси Google отримують дані, необхідні для мережевої взаємодії, зокрема IP-адресу, заголовки та час запиту.</li>
+          <li><strong>Рекламні дані.</strong> Google Mobile Ads (GMA Next-Gen) може збирати й передавати IP-адресу (для визначення приблизного місцезнаходження), взаємодії із застосунком і рекламою (запуски, натискання, перегляди відео), діагностику продуктивності, рекламний ідентифікатор Android, App Set ID та, коли застосовно, інші ідентифікатори облікових записів на пристрої. Доступність даних залежить від згоди, налаштувань пристрою та режиму реклами.</li>
+          <li><strong>Рекламна згода.</strong> Google User Messaging Platform (UMP) обробляє вибір користувача щодо рекламної згоди. SDK зберігає стан згоди локально та взаємодіє із сервісами Google для оновлення цього стану й показу форм.</li>
+          <li><strong>Покупка вимкнення реклами.</strong> Google Play обробляє оплату, а застосунок отримує ідентифікатор товару, стан покупки та токен для її перевірки, підтвердження й відновлення. Платіжні реквізити обробляє Google Play; ImageViewer їх не отримує.</li>
         </ul>
 
         <h2>2. Для чого використовуються дані</h2>
         <ul>
-          <li>щоб показувати добірки, результати пошуку та колекції зображень;</li>
-          <li>щоб відкривати детальний перегляд фото;</li>
-          <li>щоб зберігати вибрані зображення на пристрої користувача;</li>
-          <li>щоб показувати список зображень, збережених через застосунок;</li>
-          <li>щоб виконувати вимоги Unsplash щодо реєстрації події завантаження фото.</li>
+          <li>щоб показувати добірки, результати пошуку, колекції та детальний перегляд фото;</li>
+          <li>щоб зберігати вибрані зображення й показувати список завантажень на пристрої;</li>
+          <li>щоб виконувати вимоги Unsplash щодо реєстрації завантаження фото;</li>
+          <li>щоб завантажувати й показувати рекламу, персоналізувати її за наявності відповідної згоди, вимірювати покази та взаємодії;</li>
+          <li>щоб аналізувати роботу рекламного SDK, усувати технічні проблеми та запобігати шахрайству й недійсному рекламному трафіку;</li>
+          <li>щоб визначати необхідність форми згоди, зберігати та застосовувати рекламні налаштування користувача;</li>
+          <li>щоб підтверджувати й відновлювати покупку вимкнення реклами.</li>
         </ul>
 
-        <h2>3. Передача даних третім сторонам</h2>
-        <p>ImageViewer використовує сервіс Unsplash для пошуку, перегляду та завантаження зображень. Коли користувач переглядає, шукає або завантажує фото, відповідні запити надсилаються до Unsplash. Обробка даних Unsplash регулюється політикою конфіденційності Unsplash: <a href="https://unsplash.com/privacy" rel="noopener noreferrer">https://unsplash.com/privacy</a>.</p>
-        <p>Застосунок не містить рекламних SDK, не використовує Firebase Analytics, Crashlytics або інші вбудовані аналітичні сервіси, і не продає персональні дані користувачів.</p>
+        <h2>3. Сторонні сервіси, реклама та керування згодою</h2>
+        <p><strong>Unsplash.</strong> Запити пошуку, перегляду й реєстрації завантажень надсилаються до Unsplash; файли фото завантажуються з його серверів зображень. Обробку даних цим сервісом описує <a href="https://unsplash.com/privacy" rel="noopener noreferrer">політика конфіденційності Unsplash</a>.</p>
+        <p><strong>Google AdMob / GMA Next-Gen.</strong> У версії з рекламою використовуються банери та міжсторінкові повноекранні оголошення, які можуть з'являтися після успішного збереження фото з обмеженням частоти. Рекламний SDK передає описані вище дані Google та рекламним партнерам, які беруть участь у показі й вимірюванні реклами, відповідно до застосовних налаштувань і згоди. Докладніше: <a href="https://policies.google.com/privacy" rel="noopener noreferrer">політика конфіденційності Google</a>, <a href="https://policies.google.com/technologies/partner-sites" rel="noopener noreferrer">використання даних із застосунків партнерів</a> та <a href="https://developers.google.com/admob/android/next-gen/privacy/play-data-disclosure" rel="noopener noreferrer">опис даних GMA Next-Gen</a>.</p>
+        <p><strong>Google UMP.</strong> Для користувачів із рекламою застосунок автоматично відкриває початкову форму згоди, якщо цього вимагає Google UMP, наприклад залежно від регіону або строку дії попереднього вибору. Рекламні запити виконуються лише тоді, коли UMP дозволяє їх. Залежно від вибору користувача, регіону й налаштувань Google можуть бути доступні персоналізовані, неперсоналізовані або обмежені оголошення. Відмова від персоналізації не обов'язково припиняє всі покази реклами чи технічну обробку даних.</p>
+        <p><strong>Зміна рекламної згоди.</strong> Відкрийте «Завантаження» → «⋮» праворуч у верхній панелі → «Налаштування» → «Рекламні налаштування» → «Змінити налаштування». Кнопка відкриває форму Google UMP, у якій можна переглянути, змінити або відкликати згоду в межах доступних варіантів. Вона відображається лише тоді, коли UMP вимагає доступу до цих параметрів; якщо форма не потрібна, кнопку приховано. Коли Google вимагає цей доступ, кнопка залишається доступною і після покупки вимкнення реклами.</p>
+        <p><strong>Вимкнення реклами та покупки.</strong> Підтверджена покупка через Google Play вимикає завантаження й показ банерів і міжсторінкових оголошень. Оновлення стану згоди та доступ до необхідної форми UMP можуть продовжуватися. Покупка не видаляє дані, які Google уже отримав. Обробку даних покупок регулюють правила Google Play і політика конфіденційності Google.</p>
+        <p><strong>Рекламний ідентифікатор Android.</strong> У системних налаштуваннях Android знайдіть розділ «Реклама»: залежно від версії системи та Google Play services там можна скинути або видалити рекламний ідентифікатор чи обмежити персоналізацію. Ці дії не вимикають усю рекламу та не видаляють раніше передані дані. Докладніше: <a href="https://support.google.com/googleplay/android-developer/answer/6048248" rel="noopener noreferrer">довідка Google про рекламний ідентифікатор</a>.</p>
+        <p>ImageViewer не використовує Firebase Analytics або Firebase Crashlytics. Рекламні вимірювання та діагностика, описані в цій політиці, виконуються рекламним SDK Google.</p>
 
         <h2>4. Дозволи пристрою</h2>
         <ul>
-          <li><strong>Інтернет і стан мережі.</strong> Потрібні для отримання фото, колекцій і результатів пошуку з Unsplash.</li>
-          <li><strong>Читання зображень.</strong> Потрібне, щоб показувати збережені через застосунок зображення у розділі завантажень.</li>
-          <li><strong>Запис у сховище на старих версіях Android.</strong> На Android 9 і нижче може використовуватися дозвіл запису, щоб зберігати фото в галерею.</li>
+          <li><strong>Інтернет і стан мережі.</strong> Використовуються для роботи з Unsplash, завантаження фото, реклами, форм і стану згоди та покупок Google Play.</li>
+          <li><strong>Збереження зображень.</strong> На Android 10 і новіших версіях застосунок використовує MediaStore для фото, які сам зберігає, без загального дозволу на читання галереї. Поточна версія не запитує READ_MEDIA_IMAGES або READ_EXTERNAL_STORAGE.</li>
+          <li><strong>Запис у сховище на Android 8–9.</strong> Дозвіл WRITE_EXTERNAL_STORAGE запитується під час збереження фото. Його можна відкликати в системних налаштуваннях застосунку.</li>
+          <li><strong>Рекламний ідентифікатор.</strong> У маніфесті оголошено дозвіл com.google.android.gms.permission.AD_ID для рекламного SDK. Він не має окремого системного діалогу; керування ідентифікатором доступне в налаштуваннях реклами Android.</li>
+          <li><strong>Покупки Google Play.</strong> Дозвіл com.android.vending.BILLING використовується для покупки та відновлення вимкнення реклами.</li>
         </ul>
+        <p>Застосунок не запитує дозвіл на точне місцезнаходження. Приблизне місцезнаходження може визначатися рекламним сервісом за IP-адресою.</p>
 
         <h2>5. Зберігання та видалення даних</h2>
-        <p>ImageViewer не має власного серверного сховища користувацьких даних. Пошукові запити та дані фото не зберігаються на серверах розробника.</p>
-        <p>Збережені зображення залишаються на пристрої користувача, доки користувач самостійно не видалить їх через галерею, файловий менеджер або інший системний інструмент Android. Користувач також може відкликати дозволи застосунку в налаштуваннях Android.</p>
+        <p>ImageViewer не має власного серверного сховища користувацьких даних. Це не стосується серверів Unsplash, Google та рекламних партнерів, які обробляють отримані ними дані за власними політиками.</p>
+        <p>Список завантажень, кеш, локальний стан покупки, лічильники частоти реклами та збережені SDK налаштування згоди залишаються на пристрої до їх оновлення або очищення. Очистити локальні дані можна через налаштування Android або видалення застосунку. Це скидає локальні налаштування й список завантажень, але не скасовує покупку Google Play; її можна відновити для того самого облікового запису.</p>
+        <p>Фото, збережені в загальній галереї чи папці зображень, можуть залишатися після очищення даних або видалення застосунку. Видаліть їх окремо через галерею чи файловий менеджер.</p>
+        <p>Строки зберігання й процедури видалення даних на сторонніх серверах визначаються відповідними сервісами. Для даних Google дивіться <a href="https://policies.google.com/technologies/retention" rel="noopener noreferrer">правила зберігання Google</a> та доступні засоби керування даними облікового запису; для Unsplash — його політику конфіденційності. Відкликання згоди, скидання рекламного ідентифікатора, покупка вимкнення реклами або видалення ImageViewer самі по собі не є запитом на видалення вже переданих даних у цих сервісів.</p>
 
         <h2>6. Безпека</h2>
-        <p>Застосунок використовує HTTPS-з'єднання для мережевої взаємодії з Unsplash та для завантаження зображень. Водночас жоден спосіб передавання або зберігання даних не може бути гарантовано абсолютно безпечним.</p>
+        <p>З'єднання з Unsplash і завантаження зображень використовують HTTPS. Google повідомляє, що дані GMA Next-Gen шифруються під час передавання за допомогою TLS. Жоден спосіб передавання або зберігання даних не може бути гарантовано абсолютно безпечним.</p>
 
         <h2>7. Діти</h2>
         <p>ImageViewer не призначений спеціально для дітей віком до 13 років і не збирає свідомо персональні дані дітей. Якщо ви вважаєте, що дитина надала персональні дані через застосунок, зв'яжіться з розробником за контактами нижче.</p>
 
         <h2>8. Зміни до політики</h2>
-        <p>Ця політика може оновлюватися, якщо змінюються функції застосунку, дозволи, сторонні сервіси або вимоги законодавства чи платформ. Актуальна версія завжди доступна на цій сторінці.</p>
+        <p>Ця політика може оновлюватися, якщо змінюються функції застосунку, дозволи, сторонні сервіси або вимоги законодавства чи платформ. Актуальна версія та дата оновлення завжди доступні на цій сторінці.</p>
 
         <h2>9. Контакти</h2>
-        <p>З питань конфіденційності, доступу до даних або видалення даних можна звернутися через GitHub Issues цього сайту: <a href="https://github.com/Aecttann/image-viewer-site/issues" rel="noopener noreferrer">https://github.com/Aecttann/image-viewer-site/issues</a>.</p>
+        <p>З питань конфіденційності, доступу до даних або видалення даних можна звернутися через <a href="https://github.com/Aecttann/image-viewer-site/issues" rel="noopener noreferrer">GitHub Issues цього сайту</a>. Запити щодо даних, які самостійно обробляють Google чи Unsplash, можна також направляти безпосередньо цим сервісам за їхніми політиками конфіденційності.</p>
       </section>
 
       <section id="policy-en" class="policy" lang="en" hidden>
-        <p>ImageViewer is an app for browsing, searching, and saving images from Unsplash. This policy explains what data the app may process, why it is used, and how users can manage it.</p>
+        <p>ImageViewer is an app for browsing, searching, and saving images from Unsplash. This policy explains what data is processed when you use the app, see ads, or make purchases, why it is used, and how you can manage it.</p>
 
         <h2>1. Data the app processes</h2>
-        <p>ImageViewer does not require an account and does not ask users to enter their name, email address, phone number, or other direct identifiers.</p>
+        <p>ImageViewer does not require its own account or ask you to enter your name, email address, or phone number. This does not exclude third-party services from processing technical and advertising identifiers.</p>
         <p>Depending on how the app is used, the following data may be processed:</p>
         <ul>
-          <li><strong>Search queries.</strong> When a user searches for photos or collections, the query text is sent to the Unsplash API to retrieve results.</li>
-          <li><strong>Photo data from Unsplash.</strong> The app receives image URLs, titles, identifiers, author information, photo page links, and download tracking links from Unsplash.</li>
-          <li><strong>Images saved on the device.</strong> When a user saves a photo, the app writes the file to the device gallery or pictures folder.</li>
-          <li><strong>Access to local images.</strong> The app may request permission to read images so it can display photos saved through ImageViewer.</li>
-          <li><strong>Technical network request data.</strong> When the app contacts Unsplash or downloads an image, third-party servers may receive standard technical data such as IP address, device type, request headers, and request time.</li>
+          <li><strong>Search queries and photo data.</strong> Search text is sent to the Unsplash API. The app receives image URLs, titles and identifiers, author information, photo links, and download tracking URLs.</li>
+          <li><strong>Images and local data.</strong> Saved photos are written to the gallery or pictures folder. The device stores a download list with file references, an image cache, ad removal status, and ad frequency counters. The app does not upload gallery photos to developer-controlled or advertising servers.</li>
+          <li><strong>Technical network request data.</strong> Unsplash, image servers, and Google services receive data needed for network communication, including IP address, request headers, and request time.</li>
+          <li><strong>Advertising data.</strong> Google Mobile Ads (GMA Next-Gen) may collect and share IP address (to estimate general location), app and ad interactions (launches, taps, video views), performance diagnostics, Android advertising ID, App Set ID, and, where applicable, other identifiers related to accounts on the device. Data availability depends on consent, device settings, and the advertising mode.</li>
+          <li><strong>Advertising consent.</strong> Google User Messaging Platform (UMP) processes your advertising consent choices. The SDK stores consent status locally and communicates with Google services to update that status and display forms.</li>
+          <li><strong>Ad removal purchase.</strong> Google Play processes payment. The app receives the product identifier, purchase status, and a token to check, acknowledge, and restore the purchase. Google Play handles payment details; ImageViewer does not receive them.</li>
         </ul>
 
         <h2>2. How the data is used</h2>
         <ul>
-          <li>to show image feeds, search results, and collections;</li>
-          <li>to open full photo previews;</li>
-          <li>to save selected images on the user's device;</li>
-          <li>to show the list of images saved through the app;</li>
-          <li>to comply with Unsplash requirements for registering photo download events.</li>
+          <li>to show image feeds, search results, collections, and full photo previews;</li>
+          <li>to save selected images and show the download list on the device;</li>
+          <li>to comply with Unsplash requirements for registering photo downloads;</li>
+          <li>to load and display ads, personalize them with appropriate consent, and measure impressions and interactions;</li>
+          <li>to analyze advertising SDK performance, resolve technical problems, and prevent fraud and invalid ad traffic;</li>
+          <li>to determine whether a consent form is required and store and apply your advertising choices;</li>
+          <li>to acknowledge and restore the ad removal purchase.</li>
         </ul>
 
-        <h2>3. Sharing data with third parties</h2>
-        <p>ImageViewer uses Unsplash to search, browse, and download images. When a user browses, searches, or downloads photos, the related requests are sent to Unsplash. Unsplash data processing is governed by the Unsplash Privacy Policy: <a href="https://unsplash.com/privacy" rel="noopener noreferrer">https://unsplash.com/privacy</a>.</p>
-        <p>The app does not include advertising SDKs, does not use Firebase Analytics, Crashlytics, or other embedded analytics services, and does not sell users' personal data.</p>
+        <h2>3. Third-party services, advertising, and consent controls</h2>
+        <p><strong>Unsplash.</strong> Search, browsing, and download tracking requests are sent to Unsplash; photo files are downloaded from its image servers. See the <a href="https://unsplash.com/privacy" rel="noopener noreferrer">Unsplash Privacy Policy</a> for its data practices.</p>
+        <p><strong>Google AdMob / GMA Next-Gen.</strong> The ad-supported version uses banners and full-screen interstitial ads that may appear after a photo is saved successfully, with frequency limits. The advertising SDK sends the data described above to Google and advertising partners involved in ad delivery and measurement, subject to applicable settings and consent. See the <a href="https://policies.google.com/privacy" rel="noopener noreferrer">Google Privacy Policy</a>, <a href="https://policies.google.com/technologies/partner-sites" rel="noopener noreferrer">how Google uses data from partner apps</a>, and <a href="https://developers.google.com/admob/android/next-gen/privacy/play-data-disclosure" rel="noopener noreferrer">GMA Next-Gen data disclosure</a>.</p>
+        <p><strong>Google UMP.</strong> For users with ads, the app automatically presents the initial consent form when Google UMP requires it, for example based on region or when an earlier choice expires. Ad requests are made only when UMP allows them. Depending on your choices, region, and Google's configuration, personalized, non-personalized, or limited ads may be available. Declining personalization does not necessarily stop all ads or technical data processing.</p>
+        <p><strong>Changing advertising consent.</strong> Open Downloads → the “⋮” menu on the right of the top bar → Settings → Advertising preferences → Change preferences. The button opens Google's UMP form, where you can review, change, or withdraw consent using the available choices. It appears only when UMP requires access to these options; when the form is not required, the button is hidden. When Google requires this access, the button remains available after purchasing ad removal.</p>
+        <p><strong>Ad removal and purchases.</strong> A confirmed Google Play purchase disables loading and displaying banners and interstitials. Consent status updates and access to a required UMP form may continue. Purchasing ad removal does not delete data Google has already received. Google Play rules and the Google Privacy Policy govern purchase data processing.</p>
+        <p><strong>Android advertising ID.</strong> Find “Ads” in Android system settings: depending on the system and Google Play services version, you can reset or delete the advertising ID or limit personalization. These actions do not disable all ads or delete previously transmitted data. See <a href="https://support.google.com/googleplay/android-developer/answer/6048248" rel="noopener noreferrer">Google's advertising ID guidance</a>.</p>
+        <p>ImageViewer does not use Firebase Analytics or Firebase Crashlytics. The advertising measurement and diagnostics described in this policy are performed by Google's advertising SDK.</p>
 
         <h2>4. Device permissions</h2>
         <ul>
-          <li><strong>Internet and network state.</strong> Required to retrieve photos, collections, and search results from Unsplash.</li>
-          <li><strong>Read images.</strong> Required to display images saved through the app in the downloads section.</li>
-          <li><strong>Write storage on older Android versions.</strong> On Android 9 and below, write permission may be used to save photos to the gallery.</li>
+          <li><strong>Internet and network state.</strong> Used for Unsplash, image downloads, ads, consent forms and status, and Google Play purchases.</li>
+          <li><strong>Saving images.</strong> On Android 10 and later, the app uses MediaStore for photos it saves, without a general gallery read permission. The current version does not request READ_MEDIA_IMAGES or READ_EXTERNAL_STORAGE.</li>
+          <li><strong>Write storage on Android 8–9.</strong> WRITE_EXTERNAL_STORAGE is requested when saving a photo. You can revoke it in the app's system settings.</li>
+          <li><strong>Advertising ID.</strong> The manifest declares com.google.android.gms.permission.AD_ID for the advertising SDK. It has no separate system permission prompt; you can manage the identifier in Android's ad settings.</li>
+          <li><strong>Google Play purchases.</strong> com.android.vending.BILLING is used to purchase and restore ad removal.</li>
         </ul>
+        <p>The app does not request precise location permission. The advertising service may estimate general location from IP address.</p>
 
         <h2>5. Data retention and deletion</h2>
-        <p>ImageViewer does not operate its own server-side storage for user data. Search queries and photo data are not stored on developer-controlled servers.</p>
-        <p>Saved images remain on the user's device until the user deletes them through the gallery, file manager, or another Android system tool. Users can also revoke app permissions in Android settings.</p>
+        <p>ImageViewer does not operate its own server-side storage for user data. This does not cover Unsplash, Google, or advertising partner servers, which process the data they receive under their own policies.</p>
+        <p>The download list, cache, local purchase status, ad frequency counters, and SDK consent preferences remain on the device until updated or cleared. You can clear local data in Android settings or uninstall the app. This resets local preferences and the download list but does not cancel a Google Play purchase; it can be restored for the same account.</p>
+        <p>Photos saved in the shared gallery or pictures folder may remain after clearing data or uninstalling the app. Delete them separately using the gallery or file manager.</p>
+        <p>Third-party services determine retention periods and deletion procedures for data on their servers. For Google data, see <a href="https://policies.google.com/technologies/retention" rel="noopener noreferrer">Google's retention policy</a> and available account data controls; for Unsplash, see its privacy policy. Withdrawing consent, resetting the advertising ID, purchasing ad removal, or uninstalling ImageViewer does not by itself request deletion of data already sent to these services.</p>
 
         <h2>6. Security</h2>
-        <p>The app uses HTTPS connections for network communication with Unsplash and for image downloads. However, no method of transmission or storage can be guaranteed to be completely secure.</p>
+        <p>Connections to Unsplash and image downloads use HTTPS. Google states that GMA Next-Gen data is encrypted in transit using TLS. No method of transmission or storage can be guaranteed to be completely secure.</p>
 
         <h2>7. Children</h2>
         <p>ImageViewer is not specifically directed to children under 13 and does not knowingly collect children's personal data. If you believe that a child has provided personal data through the app, please contact the developer using the contact option below.</p>
 
         <h2>8. Changes to this policy</h2>
-        <p>This policy may be updated if app features, permissions, third-party services, legal requirements, or platform requirements change. The current version is always available on this page.</p>
+        <p>This policy may be updated if app features, permissions, third-party services, legal requirements, or platform requirements change. The current version and update date are always available on this page.</p>
 
         <h2>9. Contact</h2>
-        <p>For privacy questions, data access, or deletion requests, contact the developer through this site's GitHub Issues page: <a href="https://github.com/Aecttann/image-viewer-site/issues" rel="noopener noreferrer">https://github.com/Aecttann/image-viewer-site/issues</a>.</p>
+        <p>For privacy questions, data access, or deletion requests, contact the developer through <a href="https://github.com/Aecttann/image-viewer-site/issues" rel="noopener noreferrer">this site's GitHub Issues page</a>. Requests about data processed independently by Google or Unsplash can also be sent directly to those services under their privacy policies.</p>
       </section>
     </article>
   </main>
@@ -146,12 +172,12 @@
     const content = {
       uk: {
         title: 'Політика конфіденційності ImageViewer',
-        updated: 'Останнє оновлення: 28 квітня 2026 року',
+        updated: 'Останнє оновлення: 27 жовтня 2026 року',
         lang: 'uk'
       },
       en: {
         title: 'ImageViewer Privacy Policy',
-        updated: 'Last updated: April 28, 2026',
+        updated: 'Last updated: October 27, 2026',
         lang: 'en'
       }
     };
