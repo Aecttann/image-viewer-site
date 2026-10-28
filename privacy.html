@@ -30,7 +30,7 @@
       <header>
         <div>
           <h1 id="page-title">Політика конфіденційності ImageViewer</h1>
-          <p class="muted" id="last-updated">Останнє оновлення: 27 жовтня 2026 року</p>
+          <p class="muted" id="last-updated">Останнє оновлення: 28 жовтня 2026 року</p>
         </div>
         <nav class="language-switch" aria-label="Language switcher">
           <button type="button" id="lang-uk" aria-pressed="true">UK</button>
@@ -46,7 +46,7 @@
         <p>Залежно від використання функцій застосунку можуть оброблятися такі дані:</p>
         <ul>
           <li><strong>Пошукові запити та дані фото.</strong> Текст пошуку надсилається до Unsplash API. У відповідь застосунок отримує URL-адреси, назви та ідентифікатори зображень, інформацію про авторів, посилання на фото й адреси для реєстрації завантаження.</li>
-          <li><strong>Зображення й локальні дані.</strong> Збережені фото записуються в галерею або папку зображень. На пристрої зберігаються список завантажень із посиланнями на файли, кеш зображень, стан вимкнення реклами та лічильники її частоти. Застосунок не завантажує фото з галереї на сервер розробника або рекламні сервери.</li>
+          <li><strong>Зображення й локальні дані.</strong> Збережені фото записуються в галерею або папку зображень. На пристрої зберігаються локальні закладки «Обране» з ідентифікаторами, адресами зображень та інформацією про авторів; список завантажень із посиланнями на файли й відомостями про них; вибране сортування; кеш зображень; стан вимкнення реклами та лічильники її частоти. Обране не синхронізується з обліковим записом Unsplash і не надсилається розробнику. Застосунок не завантажує фото з галереї на сервер розробника або рекламні сервери.</li>
           <li><strong>Технічні дані мережевих запитів.</strong> Unsplash, сервери зображень і сервіси Google отримують дані, необхідні для мережевої взаємодії, зокрема IP-адресу, заголовки та час запиту.</li>
           <li><strong>Рекламні дані.</strong> Google Mobile Ads (GMA Next-Gen) може збирати й передавати IP-адресу (для визначення приблизного місцезнаходження), взаємодії із застосунком і рекламою (запуски, натискання, перегляди відео), діагностику продуктивності, рекламний ідентифікатор Android, App Set ID та, коли застосовно, інші ідентифікатори облікових записів на пристрої. Доступність даних залежить від згоди, налаштувань пристрою та режиму реклами.</li>
           <li><strong>Рекламна згода.</strong> Google User Messaging Platform (UMP) обробляє вибір користувача щодо рекламної згоди. SDK зберігає стан згоди локально та взаємодіє із сервісами Google для оновлення цього стану й показу форм.</li>
@@ -56,7 +56,7 @@
         <h2>2. Для чого використовуються дані</h2>
         <ul>
           <li>щоб показувати добірки, результати пошуку, колекції та детальний перегляд фото;</li>
-          <li>щоб зберігати вибрані зображення й показувати список завантажень на пристрої;</li>
+          <li>щоб зберігати вибрані зображення, вести локальне обране, показувати й сортувати завантаження та видаляти вибрані завантажені файли на пристрої;</li>
           <li>щоб виконувати вимоги Unsplash щодо реєстрації завантаження фото;</li>
           <li>щоб завантажувати й показувати рекламу, персоналізувати її за наявності відповідної згоди, вимірювати покази та взаємодії;</li>
           <li>щоб аналізувати роботу рекламного SDK, усувати технічні проблеми та запобігати шахрайству й недійсному рекламному трафіку;</li>
@@ -76,17 +76,19 @@
         <h2>4. Дозволи пристрою</h2>
         <ul>
           <li><strong>Інтернет і стан мережі.</strong> Використовуються для роботи з Unsplash, завантаження фото, реклами, форм і стану згоди та покупок Google Play.</li>
-          <li><strong>Збереження зображень.</strong> На Android 10 і новіших версіях застосунок використовує MediaStore для фото, які сам зберігає, без загального дозволу на читання галереї. Поточна версія не запитує READ_MEDIA_IMAGES або READ_EXTERNAL_STORAGE.</li>
-          <li><strong>Запис у сховище на Android 8–9.</strong> Дозвіл WRITE_EXTERNAL_STORAGE запитується під час збереження фото. Його можна відкликати в системних налаштуваннях застосунку.</li>
+          <li><strong>Збереження зображень.</strong> На Android 10 і новіших версіях застосунок використовує MediaStore для фото, які сам зберігає, без загального дозволу на читання галереї. Дозволи READ_MEDIA_IMAGES і READ_MEDIA_VISUAL_USER_SELECTED не запитуються; READ_EXTERNAL_STORAGE і WRITE_EXTERNAL_STORAGE обмежені Android 8–9.</li>
+          <li><strong>Сховище на Android 8–9.</strong> Оголошено READ_EXTERNAL_STORAGE і WRITE_EXTERNAL_STORAGE для доступу до завантажених файлів. Дозвіл на запис запитується під час збереження або видалення фото. Дозволи можна відкликати в системних налаштуваннях застосунку.</li>
           <li><strong>Рекламний ідентифікатор.</strong> У маніфесті оголошено дозвіл com.google.android.gms.permission.AD_ID для рекламного SDK. Він не має окремого системного діалогу; керування ідентифікатором доступне в налаштуваннях реклами Android.</li>
+          <li><strong>Технічні дозволи бібліотек.</strong> Рекламний SDK оголошує READ_BASIC_PHONE_STATE для доступу до базових технічних відомостей про тип мобільної мережі й версію програмного забезпечення. Його залежність WorkManager оголошує WAKE_LOCK і FOREGROUND_SERVICE. Це звичайні дозволи Android, які надаються під час встановлення без окремого запиту користувачеві.</li>
           <li><strong>Покупки Google Play.</strong> Дозвіл com.android.vending.BILLING використовується для покупки та відновлення вимкнення реклами.</li>
         </ul>
         <p>Застосунок не запитує дозвіл на точне місцезнаходження. Приблизне місцезнаходження може визначатися рекламним сервісом за IP-адресою.</p>
 
         <h2>5. Зберігання та видалення даних</h2>
         <p>ImageViewer не має власного серверного сховища користувацьких даних. Це не стосується серверів Unsplash, Google та рекламних партнерів, які обробляють отримані ними дані за власними політиками.</p>
-        <p>Список завантажень, кеш, локальний стан покупки, лічильники частоти реклами та збережені SDK налаштування згоди залишаються на пристрої до їх оновлення або очищення. Очистити локальні дані можна через налаштування Android або видалення застосунку. Це скидає локальні налаштування й список завантажень, але не скасовує покупку Google Play; її можна відновити для того самого облікового запису.</p>
-        <p>Фото, збережені в загальній галереї чи папці зображень, можуть залишатися після очищення даних або видалення застосунку. Видаліть їх окремо через галерею чи файловий менеджер.</p>
+        <p>Локальне обране, список завантажень, сортування, стан покупки, лічильники частоти реклами та збережені SDK налаштування згоди залишаються на пристрої до їх оновлення або очищення. Закладку можна прибрати кнопкою серця; це не видаляє завантажений файл. Очистити локальні дані можна через налаштування Android або видалення застосунку. Це скидає обране, локальні налаштування й список завантажень, але не скасовує покупку Google Play; її можна відновити для того самого облікового запису. Застосунок вимикає стандартне резервне копіювання своїх локальних даних засобами Android.</p>
+        <p>Ви можете видалити один або кілька завантажених файлів у розділі «Завантаження». Після підтвердження видаляються самі файли, а не лише записи зі списку; для деяких файлів Android додатково запитує системне підтвердження. Невдале або скасоване видалення не вважається успішним. Фото в загальній галереї чи папці зображень можуть залишатися після очищення даних або видалення застосунку; їх також можна видалити через галерею чи файловий менеджер.</p>
+        <p><strong>Кеш переглянутих зображень.</strong> Бібліотека зображень може тимчасово зберігати копії в пам’яті та на диску для повторного показу. Обсяг кешу обмежений; наявність фото в обраному не гарантує офлайн-доступ. Відкрийте «Завантаження» → «⋮» → «Налаштування» → «Сховище» → «Очистити кеш», щоб очистити кеш зображень. Це не видаляє обране, завантажені файли, покупку, рекламну згоду або окремі кеші рекламного SDK і браузера. Під час подальшого перегляду зображення можуть кешуватися знову.</p>
         <p>Строки зберігання й процедури видалення даних на сторонніх серверах визначаються відповідними сервісами. Для даних Google дивіться <a href="https://policies.google.com/technologies/retention" rel="noopener noreferrer">правила зберігання Google</a> та доступні засоби керування даними облікового запису; для Unsplash — його політику конфіденційності. Відкликання згоди, скидання рекламного ідентифікатора, покупка вимкнення реклами або видалення ImageViewer самі по собі не є запитом на видалення вже переданих даних у цих сервісів.</p>
 
         <h2>6. Безпека</h2>
@@ -110,7 +112,7 @@
         <p>Depending on how the app is used, the following data may be processed:</p>
         <ul>
           <li><strong>Search queries and photo data.</strong> Search text is sent to the Unsplash API. The app receives image URLs, titles and identifiers, author information, photo links, and download tracking URLs.</li>
-          <li><strong>Images and local data.</strong> Saved photos are written to the gallery or pictures folder. The device stores a download list with file references, an image cache, ad removal status, and ad frequency counters. The app does not upload gallery photos to developer-controlled or advertising servers.</li>
+          <li><strong>Images and local data.</strong> Saved photos are written to the gallery or pictures folder. The device stores local Favorites bookmarks with photo identifiers, image URLs, and author information; a download list with file references and file information; your sorting preference; an image cache; ad removal status; and ad frequency counters. Favorites are not synchronized with an Unsplash account or sent to the developer. The app does not upload gallery photos to developer-controlled or advertising servers.</li>
           <li><strong>Technical network request data.</strong> Unsplash, image servers, and Google services receive data needed for network communication, including IP address, request headers, and request time.</li>
           <li><strong>Advertising data.</strong> Google Mobile Ads (GMA Next-Gen) may collect and share IP address (to estimate general location), app and ad interactions (launches, taps, video views), performance diagnostics, Android advertising ID, App Set ID, and, where applicable, other identifiers related to accounts on the device. Data availability depends on consent, device settings, and the advertising mode.</li>
           <li><strong>Advertising consent.</strong> Google User Messaging Platform (UMP) processes your advertising consent choices. The SDK stores consent status locally and communicates with Google services to update that status and display forms.</li>
@@ -120,7 +122,7 @@
         <h2>2. How the data is used</h2>
         <ul>
           <li>to show image feeds, search results, collections, and full photo previews;</li>
-          <li>to save selected images and show the download list on the device;</li>
+          <li>to save selected images, keep local Favorites, show and sort downloads, and delete selected downloaded files on the device;</li>
           <li>to comply with Unsplash requirements for registering photo downloads;</li>
           <li>to load and display ads, personalize them with appropriate consent, and measure impressions and interactions;</li>
           <li>to analyze advertising SDK performance, resolve technical problems, and prevent fraud and invalid ad traffic;</li>
@@ -140,17 +142,19 @@
         <h2>4. Device permissions</h2>
         <ul>
           <li><strong>Internet and network state.</strong> Used for Unsplash, image downloads, ads, consent forms and status, and Google Play purchases.</li>
-          <li><strong>Saving images.</strong> On Android 10 and later, the app uses MediaStore for photos it saves, without a general gallery read permission. The current version does not request READ_MEDIA_IMAGES or READ_EXTERNAL_STORAGE.</li>
-          <li><strong>Write storage on Android 8–9.</strong> WRITE_EXTERNAL_STORAGE is requested when saving a photo. You can revoke it in the app's system settings.</li>
+          <li><strong>Saving images.</strong> On Android 10 and later, the app uses MediaStore for photos it saves, without a general gallery read permission. The app does not request READ_MEDIA_IMAGES or READ_MEDIA_VISUAL_USER_SELECTED; READ_EXTERNAL_STORAGE and WRITE_EXTERNAL_STORAGE are limited to Android 8–9.</li>
+          <li><strong>Storage on Android 8–9.</strong> READ_EXTERNAL_STORAGE and WRITE_EXTERNAL_STORAGE are declared for access to downloaded files. Write permission is requested when saving or deleting a photo. You can revoke permissions in the app's system settings.</li>
           <li><strong>Advertising ID.</strong> The manifest declares com.google.android.gms.permission.AD_ID for the advertising SDK. It has no separate system permission prompt; you can manage the identifier in Android's ad settings.</li>
+          <li><strong>Technical library permissions.</strong> The advertising SDK declares READ_BASIC_PHONE_STATE for access to basic technical information such as cellular network type and software version. Its WorkManager dependency declares WAKE_LOCK and FOREGROUND_SERVICE. These are normal Android permissions granted at installation without a separate runtime prompt.</li>
           <li><strong>Google Play purchases.</strong> com.android.vending.BILLING is used to purchase and restore ad removal.</li>
         </ul>
         <p>The app does not request precise location permission. The advertising service may estimate general location from IP address.</p>
 
         <h2>5. Data retention and deletion</h2>
         <p>ImageViewer does not operate its own server-side storage for user data. This does not cover Unsplash, Google, or advertising partner servers, which process the data they receive under their own policies.</p>
-        <p>The download list, cache, local purchase status, ad frequency counters, and SDK consent preferences remain on the device until updated or cleared. You can clear local data in Android settings or uninstall the app. This resets local preferences and the download list but does not cancel a Google Play purchase; it can be restored for the same account.</p>
-        <p>Photos saved in the shared gallery or pictures folder may remain after clearing data or uninstalling the app. Delete them separately using the gallery or file manager.</p>
+        <p>Local Favorites, the download list, sorting preferences, local purchase status, ad frequency counters, and SDK consent preferences remain on the device until updated or cleared. Tap the heart to remove a bookmark; this does not delete a downloaded file. You can clear local data in Android settings or uninstall the app. This resets Favorites, local preferences, and the download list but does not cancel a Google Play purchase; it can be restored for the same account. The app disables standard Android backup of its local data.</p>
+        <p>You can delete one or more downloaded files in Downloads. After confirmation, the files themselves are deleted, not just list entries; Android may also require system confirmation for some files. Failed or cancelled deletions are not treated as successful. Photos in the shared gallery or pictures folder may remain after clearing data or uninstalling the app; you can also delete them using the gallery or file manager.</p>
+        <p><strong>Viewed image cache.</strong> The image library may temporarily keep copies in memory and on disk for repeated display. Cache size is limited; adding a photo to Favorites does not guarantee offline access. Open Downloads → “⋮” → Settings → Storage → Clear cache to clear the image cache. This does not remove Favorites, downloaded files, purchases, advertising consent, or separate advertising SDK and browser caches. Images may be cached again as you browse.</p>
         <p>Third-party services determine retention periods and deletion procedures for data on their servers. For Google data, see <a href="https://policies.google.com/technologies/retention" rel="noopener noreferrer">Google's retention policy</a> and available account data controls; for Unsplash, see its privacy policy. Withdrawing consent, resetting the advertising ID, purchasing ad removal, or uninstalling ImageViewer does not by itself request deletion of data already sent to these services.</p>
 
         <h2>6. Security</h2>
@@ -172,12 +176,12 @@
     const content = {
       uk: {
         title: 'Політика конфіденційності ImageViewer',
-        updated: 'Останнє оновлення: 27 жовтня 2026 року',
+        updated: 'Останнє оновлення: 28 жовтня 2026 року',
         lang: 'uk'
       },
       en: {
         title: 'ImageViewer Privacy Policy',
-        updated: 'Last updated: October 27, 2026',
+        updated: 'Last updated: October 28, 2026',
         lang: 'en'
       }
     };
